@@ -1,0 +1,10 @@
+# project_dependencies
+node_modules
+
+#temporary files
+*.tmp
+*_
+
+#files by babel
+dist
+public/dist
