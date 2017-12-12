@@ -13,10 +13,10 @@ function speak(){
     console.log('Hello World');
 }
 
-for (let s of sentences) {
-    console.log('this is iterator s', s);
-    say(s);
-}
+// for (let s of sentences) {
+//     console.log('this is iterator s', s);
+//     say(s);
+// }
 
 export { say }
 // export default function() {}
