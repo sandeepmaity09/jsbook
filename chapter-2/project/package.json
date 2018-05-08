@@ -1,7 +1,7 @@
 {
   "name": "jsbook",
   "version": "1.0.0",
-  "description": "",
+  "description": "a simple project to test my jsbook code",
   "author": "ghost",
   "license": "ISC",
   "devDependencies": {
@@ -10,6 +10,6 @@
     "babel-preset-es2015": "^6.24.1",
     "gulp": "^3.9.1",
     "gulp-babel": "^7.0.0",
-    "underscore": "^1.8.3"
+    "gulp-eslint": "^4.0.0"
   }
 }
