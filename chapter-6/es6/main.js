@@ -137,3 +137,20 @@ console.log('this is method', obj.bark());
 
 
 // The this keyword
+
+const thisobj = {
+    name: "Sandeep",
+    getBackwards: function () {
+        const self = this;
+        function getReverseName() {
+            let nameBackwards = '';
+            for (let i = self.name.length-1; i >= 0; i--) {
+                nameBackwards += self.name[i];
+            }
+            return nameBackwards;
+        }
+        return `${getReverseName()}`;
+    }
+}
+
+console.log('this is nameBackward', thisobj.getBackwards());
