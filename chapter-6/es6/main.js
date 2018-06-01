@@ -190,3 +190,42 @@ const arrowNotation = {
 }
 
 console.log('this is arrow function', arrowNotation.greetBackwards());
+
+
+// Call, Apply , & Bind
+
+// Call :- method available on all functions that allows you to call the function with a specific value of this.
+const bruce = { name: "Bruce" };
+const madeline = { name: "Madeline" };
+
+function greete() {
+    return `Hello, I'm ${this.name}!`;
+}
+
+// console.log(greete());
+console.log(greete.call(bruce));
+console.log(greete.call(madeline));
+
+function update(birthYear, occupation) {
+    this.birthYear = birthYear;
+    this.occupation = occupation;
+}
+
+console.log(update.call(bruce, 1979, "Singer"))
+console.log('this is bruce', bruce);
+
+// apply :- identical to call, only takes parameters as array
+
+console.log(update.apply(madeline, [1967, "Broker"]));
+console.log('this is madeline', madeline);
+
+const arrr = [1, 3, 5324, 23, -234234, 234234, -234234,];
+console.log(Math.min.apply(null, arrr));
+console.log(Math.max.apply(null, arrr));
+
+// bind: permanently associate a value for this with a function.
+// Note ======= action of bind is permanent makes it potentially a source of difficulty to find bugs.
+
+const updateBruce = update.bind(bruce);
+updateBruce(1823, "Pizza Maker")
+console.log('this is bruce', bruce);
