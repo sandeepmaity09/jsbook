@@ -144,7 +144,7 @@ const thisobj = {
         const self = this;
         function getReverseName() {
             let nameBackwards = '';
-            for (let i = self.name.length-1; i >= 0; i--) {
+            for (let i = self.name.length - 1; i >= 0; i--) {
                 nameBackwards += self.name[i];
             }
             return nameBackwards;
@@ -154,3 +154,17 @@ const thisobj = {
 }
 
 console.log('this is nameBackward', thisobj.getBackwards());
+
+
+// Function Expression and Anonymous Functions
+
+const g = function f(stop, count) {
+    // let counter = count;
+    if (stop) console.log('f stopped', count);
+    f(true, count++);
+}
+// g(false, 0);
+
+// NOTE:- if the function declaration is used as an expression , it is a function expression
+//        else it's a function declaration
+
