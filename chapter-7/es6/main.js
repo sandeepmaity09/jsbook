@@ -80,3 +80,45 @@ console.log(f3());
 
 // Normally, things that are out of scope are strictly inaccessible. Functions are special
 // in that they allow us a window into the scope that are otherwise insccessilbe.
+
+
+
+// IIFE:- Immediately Invoked Function Expression
+
+const message = (function () {
+    const secret = "I'm a secret!";
+    return `The message is ${secret.length} characters long`;
+})();
+console.log(message);
+
+
+const f4 = (function () {
+    let count = 0;
+    return function () {
+        return `I have been called ${++count} times`;
+    }
+})();
+console.log(f4());
+console.log(f4());
+
+
+// Variable Hoisting
+// Function Hoisting
+
+// The Temporal Dead Zone (TDZ) :-
+//  TDZ is a dramatic expression for the intutitive concept that variables declared with let don't exist
+//  until you declare them. Within a scope, the TDZ for a variable is the code before the variable is declared.
+
+// The Error (TDZ Case)
+
+if (typeof p === "undefined") {
+    console.log("p doesn't exist or is undefined");
+} else {
+    // ssafe to refer to x
+}
+let p = 5;
+
+
+// Strict Mode
+
+// implicit global : IN ES5 if you forgot to declare a variable with var, it's considered as global
