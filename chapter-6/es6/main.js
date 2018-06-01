@@ -170,6 +170,10 @@ const g = function f(stop, count) {
 
 // Arrow Notation
 // By using arrow notation we can use this function inside function
+// Note: Two Additional Difference:-
+// 1. Can't be used as object constructor
+// 2. arguments variable not avaliable
+
 
 const arrowNotation = {
     name: "Sandeep",
