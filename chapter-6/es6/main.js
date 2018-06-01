@@ -122,3 +122,18 @@ console.log('this is default args', f3(5, 6));
 console.log('this is default args', f3(5));
 console.log('this is default args', f3());
 // console.log('this is default args');
+
+
+// Function as Properties of Objects
+
+const obj = {
+    name: "Wallce",
+    bark: function () {
+        return "Woof";
+    }
+}
+
+console.log('this is method', obj.bark());
+
+
+// The this keyword
