@@ -109,3 +109,16 @@ function addPrefix(prefix, ...words) {
 }
 
 console.log('this is addPrefix calling', addPrefix("con", "verse", "vex"));
+
+
+// Default Arguments
+
+function f3(a, b = "default", c = 3) {
+    return `${a} - ${b} - ${c}`;
+}
+
+console.log('this is default args', f3(5, 6, 7));
+console.log('this is default args', f3(5, 6));
+console.log('this is default args', f3(5));
+console.log('this is default args', f3());
+// console.log('this is default args');
