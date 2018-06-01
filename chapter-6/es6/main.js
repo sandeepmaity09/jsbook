@@ -168,3 +168,21 @@ const g = function f(stop, count) {
 // NOTE:- if the function declaration is used as an expression , it is a function expression
 //        else it's a function declaration
 
+// Arrow Notation
+// By using arrow notation we can use this function inside function
+
+const arrowNotation = {
+    name: "Sandeep",
+    greetBackwards: function () {
+        const getReverseName = () => {
+            let nameBackward = '';
+            for (let i = this.name.length - 1; i >= 0; i--) {
+                nameBackward += this.name[i];
+            }
+            return nameBackward;
+        }
+        return `${getReverseName()}`;
+    }
+}
+
+console.log('this is arrow function', arrowNotation.greetBackwards());
